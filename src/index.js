@@ -13,6 +13,8 @@ app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json())
 app.use(cors({origen:'*'}))
 
+app.use("/", (req, res) => res.send("Welcome to the PalmTech API!"));
+
 app.use('/technicians',require('./routes/technicians.routes'))
 app.use('/services',require('./routes/services.routes'))
 
