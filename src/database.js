@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 URI=('mongodb://localhost/db-palmtech')
 
-mongoose.connect(URI, {
+mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
 })

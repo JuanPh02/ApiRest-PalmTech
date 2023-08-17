@@ -3,9 +3,9 @@ const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
 const bodyparser = require('body-parser');
+const dotenv = require('dotenv').config();
 require('./database')
 const PORT = 8000;
-
 
 app.set('port', process.env.PORT || 8000)
 app.use(morgan('dev'))
