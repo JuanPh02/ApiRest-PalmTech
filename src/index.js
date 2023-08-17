@@ -17,6 +17,7 @@ app.use(cors({origen:'*'}))
 app.use('/technicians',require('./routes/technicians.routes'))
 app.use('/services',require('./routes/services.routes'))
 app.use("/", (req, res) => res.send("Welcome to the PalmTech API!"));
+app.all("*", (req, res) =>res.send("You've tried reaching a route that doesn't exist."));
 
 app.listen(PORT, () => {
     console.log(`Server started on port: http://localhost:${PORT}`)
